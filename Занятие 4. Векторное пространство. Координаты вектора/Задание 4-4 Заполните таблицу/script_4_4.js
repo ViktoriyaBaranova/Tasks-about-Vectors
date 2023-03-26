@@ -4,6 +4,10 @@ const numberOfRows = 4, score = 10;
 let count = 0, mark = 0; 
 let table = document.querySelector('table');
 
+const btnCheck = document.querySelector(".check");
+const btnBack = document.querySelector(".back");
+const btnReset = document.querySelector(".reset");
+
 const calculateValues = () =>{
     let arrTableValue = [];
     for (let i=0; i<numberOfRows; i++){
@@ -88,7 +92,6 @@ calculateValues();
 rememberMissingValues();
 createTable();
 
-const btnCheck = document.querySelector(".check");
 btnCheck.addEventListener('click', ()=>{
     count = 0, mark = 0;
     const arrInputs = document.querySelectorAll('input');
@@ -104,7 +107,6 @@ btnCheck.addEventListener('click', ()=>{
     //console.log(count, mark);
 });
 
-const btnBack = document.querySelector(".back");
 btnBack.addEventListener('click', ()=>{
     console.log('back', data[num]);
 
@@ -114,7 +116,6 @@ btnBack.addEventListener('click', ()=>{
     createTable(data[num].userAnsw);
 });
 
-const btnReset = document.querySelector(".reset");
 btnReset.addEventListener('click', ()=>{
     console.log('reset', data[num]);
     const arrInputs = document.querySelectorAll('input');
