@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    background-color: #ffffff;
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+
+svg{
+    margin: 20px;
+}
+.vector, .projection {
+  cursor: pointer;
+}
+button{
+    width: 100px;
+    margin 20px;
+    margin-bottom: 10px;
+}
+
+input{
+    padding: 2px;
+    margin-left: 5px;
+    height: 20px;
+    text-align: center;
+}
+.task{
+    display: flex;
+    flex-direction: row;
+}
+p{
+    text-align: left;
+}
+.color{
+    width: 30px;
+    height: 25px;
+    border: 1px solid #414141;
+    border-radius: 5px;
+}
