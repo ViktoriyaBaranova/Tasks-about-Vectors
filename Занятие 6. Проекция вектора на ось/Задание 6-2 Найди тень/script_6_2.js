@@ -4,10 +4,11 @@
 // console.log('json', data);
 let svg = document.getElementById('pic'); 
 const form = document.querySelector('.form');
+const btnCheck = document.querySelector(".check");
+const btnBack = document.querySelector(".back");
+const btnReset = document.querySelector(".reset");
 
-let sizeSvg = 14, 
-    count = 0,
-    mark = 0;
+let sizeSvg = 14, count = 0, mark = 0;
 const variant = 0, 
       coordAxes = [[1, sizeSvg+1, 1, 1], [0, sizeSvg,  sizeSvg+1, sizeSvg]];
 let rest = data[variant].vectors.length;
@@ -171,7 +172,6 @@ const matchingGenerator = ()=>{
     addEventToVect(arrProj, data[variant].projections);
 }
 
-const btnCheck = document.querySelector(".check");
 btnCheck.addEventListener('click', ()=>{
     for (let i=0; i<data[variant].projections.length; i++){
         const sameElem = svg.querySelectorAll(`.group-${i+1}`);
@@ -189,7 +189,6 @@ btnCheck.addEventListener('click', ()=>{
     console.log("check", data);
 });
 
-const btnBack = document.querySelector(".back");
 btnBack.addEventListener('click', ()=>{
     const vect = svg.querySelectorAll('.vector');
     const colorVect =[...vect].map(el=> el.getAttribute('stroke'));
@@ -203,7 +202,6 @@ btnBack.addEventListener('click', ()=>{
     
 });
 
-const btnReset = document.querySelector(".reset");
 btnReset.addEventListener('click', ()=>{
     arrInputs = [], answInputs = [], answColorVect = [], count = 0, mark = 0;
     const arrVect = svg.querySelectorAll('path.vector');
