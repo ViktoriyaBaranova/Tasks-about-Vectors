@@ -111,7 +111,6 @@ btnBack.addEventListener('click', ()=>{
     console.log('back', data[num]);
 
     const arrInputs = document.querySelectorAll('input');
-    let numInput = 0;
     data[num].userAnsw = [...arrInputs].map(el=> el.value); 
     createTable(data[num].userAnsw);
 });
